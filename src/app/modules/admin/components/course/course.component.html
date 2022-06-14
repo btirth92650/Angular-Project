@@ -1,0 +1,39 @@
+<section class="course">
+    <div class="container">
+        <h1 class="text" class="text-center" style="text-decoration: underline;" > All Courses</h1>
+        <div class="row mt-1 " >
+            <div class="col-lg-3" *ngFor="let cs of course">
+                <div class="box">
+                    <img src="{{cs.image}}" width="100%">
+                    <h3></h3> 
+                    <h3> {{cs.id}} {{cs.name}}</h3>
+                    <p>{{cs.discription}}</p> 
+                    <a href="https://www.w3schools.com/"  
+                    class="btn btn-lg btn-primary"> Watch now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<input type="file" id="input" (change)="excelRead($event)">
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Sno.</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let i of studentRecords; let index1=index">
+            <td>{{index1+1}}</td>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.course}}</td>
+        </tr>
+    </tbody>
+</table>
+

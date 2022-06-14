@@ -1,0 +1,79 @@
+.page
+{
+    border: 9px solid #47061a;
+    border-left:  9px solid rgb(22, 7, 77);  
+    border-right:  9px solid rgb(22, 7, 77);
+    background-color: teal;
+}
+.app
+{
+    background-color: rgb(133, 110, 110);
+}
+.todo
+{
+    display:flex;
+    padding: 10px 15px;
+    background-color:#fff;
+    border-bottom: 2px solid#ddd;
+}
+.todo:nth-child(even)
+{
+    background-color: #eee;
+}
+.todo:last-of-type
+{
+    border-bottom: 0;
+}
+.todo .id
+{
+    flex: 1 1 50px;
+    font-size: x-large;
+}
+.todo .content
+{
+    flex: 1 1 70%;
+    font-size: x-large;
+    font-style: italic;
+    font-style: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.todo .delete
+{
+    font-size: x-large
+}
+.todo.done .content
+{
+    text-decoration:line-through;
+}
+.todo-input
+{
+    display:block;
+    width: 80%;
+    padding: 10px 20px;
+    appearance: none;
+    border: none;
+    background-color: #f3f3f3;
+    margin-top: 50px;
+    font-size: 20px;
+    outline: none;
+}
+.todo-submit
+{
+    display: block;
+	width: 100%;
+	max-width: 200px;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #FE4880;
+	color: #FFF;
+	margin: 15px auto;
+
+	padding: 10px 15px;
+	font-size: 18px;
+	font-weight: 700;
+
+}

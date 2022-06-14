@@ -1,0 +1,124 @@
+{
+  "Employee": [
+    {
+      "id": "1",
+      "fullname": " Bhalani Tirth",
+      "age": "20",
+      "gender": "Male",
+      "email": "tirth@gmail.com",
+      "salary": "50000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "2",
+      "fullname": "Bhalani Raj",
+      "age": "21",
+      "gender": "Male",
+      "email": "raj@gmail.com",
+      "salary": "45000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "3",
+      "fullname": "Padaliya Sanket",
+      "age": "26",
+      "gender": "Male",
+      "email": "sanket@gmail.com",
+      "salary": "70000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "4",
+      "fullname": "Amarutiya Shruti",
+      "age": "21",
+      "gender": "Female",
+      "email": "shruti@gmail.com",
+      "salary": "30000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "5",
+      "fullname": "Kaneriya Khushi",
+      "age": "19",
+      "gender": "Female",
+      "email": "khushi@gmail.com",
+      "salary": "25000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "6",
+      "fullname": "Bhalodiya Abhi",
+      "age": "22",
+      "gender": "Male",
+      "email": "abhi@gmail.com",
+      "salary": "35000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "7",
+      "fullname": "Patel Jinkal",
+      "age": "20",
+      "gender": "Female",
+      "email": "jinkal@gmail.com",
+      "salary": "35000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "8",
+      "fullname": "Padaliya Palak",
+      "age": "21",
+      "gender": "Female",
+      "email": "palak@gmail.com",
+      "salary": "32000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "9",
+      "fullname": "Lo Yash",
+      "age": "19",
+      "gender": "Male",
+      "email": "yash@gmail.com",
+      "salary": "52000",
+      "qualification": [
+        "BCA"
+      ]
+    },
+    {
+      "id": "10",
+      "fullname": " Dhingani Harshil ",
+      "age": "24",
+      "gender": "Male",
+      "email": "harshil@gmail.com",
+      "salary": "65000",
+      "qualification": [
+        "BCA"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

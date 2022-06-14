@@ -1,0 +1,39 @@
+
+
+<form>
+    <input type="file" class="form-group" (change)="save($event)" multiple="multiple">
+    <br>
+    <span [innerHTML]="result"></span>
+</form>
+
+
+
+<table class="body" border="2">
+    <tr>
+        <th> <h4>SRN</h4> </th>
+        <th> <h4>Name</h4> </th>
+        <th> <h4>Age</h4> </th>
+        <th> <h4>E-mail</h4></th>
+        <th> <h4>Qualification</h4> </th>
+        <th> <h4>Salary</h4> </th>
+    </tr>
+    <tr *ngFor="let emp of employee; let i=index; trackBy:getEmployeeusingTrackBy">
+        <td>{{i+1}}</td>
+        <td> {{emp.name}}</td>
+        <td> {{emp.age}}</td>
+        <td> {{emp.email}}</td>
+        <td>
+            <ul *ngFor="let quli of emp.qualification;">
+                <li> {{quli}}</li>
+            </ul>
+        </td>
+        <td> {{emp.salary}}</td>
+    </tr> 
+</table>
+<br>
+<button (click)="LoadMoreEmployee()"><img *ngIf="isLoading" style="margin-right: 25px;" style="width: 22px" src="assets/spinner2.gif">LoadMoreEmployee</button>
+<button  (click)="LoadLessEmployee()"><img *ngIf="isLoadings" style="width: 22px" src="assets/spinner2.gif">LoadLessEmployee</button>
+
+
+
+

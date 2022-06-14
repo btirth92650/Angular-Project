@@ -1,0 +1,65 @@
+<section>
+    <style>
+    table,
+    th,
+    td {
+      width: 225px;
+      border: 1px solid black;
+      border-collapse: collapse;
+     }
+
+    th,
+    td {
+      padding: 5px;
+      text-align: center;
+
+    }
+  </style>
+
+  <nav class="navbar">
+
+    <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()"
+      placeholder="Enter First Name to search">
+  </nav>
+  <input type="file" id="input" (change)="excelRead($event)">
+  <tr class="head">
+    <th> Sr No</th>
+    <th> Full Name </th>
+    <th> Age </th>
+    <th> Gender </th>
+    <th> E-mail </th>
+    <th> Salary </th>
+    <th> Qualification </th>
+  </tr>
+  <tr class="emp" *ngFor=" let i of studentRecord; let index1=index">
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.gender}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.salary}}</td>
+    <td>{{i.qualification}}</td>
+  </tr>
+
+  <tr class="emp" *ngFor="let emp of employee  ">
+    <td>{{emp.id}} </td>
+    <td> {{emp.fullname}} </td>
+    <td> {{emp.age}} </td>
+    <td> {{emp.gender}} </td>
+    <td> {{emp.email}} </td>
+    <td> {{emp.salary}} </td>
+    <td> {{emp.qualification}} </td>
+  </tr>
+
+
+  <h1>Grid Layout</h1>
+
+  <div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+  </div><br> <br>
+
+</section> 

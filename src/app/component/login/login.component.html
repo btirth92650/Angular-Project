@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <div class="text-center">
+                        <!-- <fa-icon [icon]="faLock" class="fa-3x"> </fa-icon> -->
+                        <i class="fa fa-lock fa-5x" aria-hidden="true"></i>
+                    </div>
+                <h1> Login !</h1>
+                <h6>Please enter email & password!!</h6>
+            </div>
+            <form>
+               <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                   <div class="mb-3">
+                     <label for="exampleInputEmail1" class="form-label">Email address</label>
+                     <input type="email" class="form-control" formControlName="email"  id="email" >
+                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                   </div>
+                   <div class="mb-3">
+                     <label for="exampleInputPassword1" class="form-label">Password</label>
+                     <input type="password" formControlName="password"  name="password" class="form-control"   id="password">
+                   </div>
+                   <button type="submit" class="btn btn-primary" >Login <img *ngIf="loading" style="width: 22px" src="assets/spinner2.gif">  </button> 
+                   <!-- <i class="fa fa-spinner fa-spin" *ngIf="loading"></i> -->
+                   <!-- (click)="logInUser()" -->
+                   <div class="card-footer ">
+                    <h6 class="footar"><a routerLink="../forgot-password">Forgot Password</a></h6>
+                </div>   
+                 </form>
+            </form>
+        </div>
+       </div>
+    </div>
+</div> 
+
+
+
+<!-- <div class="container">
+    <div class="row">
+      <div id="loader">
+          <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="loading"></div>
+      </div>
+    </div>
+  </div> -->

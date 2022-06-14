@@ -1,0 +1,67 @@
+
+<body>
+    <div class="container"> 
+        <h1 class="text-white bg-dark text-center"> modal in bootstrap 4 </h1>
+        <button class="btn btn-success" data-target="#mymodal" data-toggle="modal" (click)="open(content)"> Open Signup </button>
+        </div>
+</body>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">New Friend</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="firstname">Firstname</label>
+          <div class="input-group">
+            <input id="firstname" class="form-control" >
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+
+
+
+<section class="page ">
+    <div class="about container">
+        <h1 class="about text-center mb-5"> About</h1>
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."</p>
+
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."</p>
+
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum."</p>
+
+        <div class="follow text-center">
+            <h4> Follow Us </h4>
+            <i class="fa fa-youtube-play fa-2x"><a href="#">youtube</a></i>
+            <i class="fa fa-facebook-square fa-2x"><a href="#">facebook</a></i><br>
+            <i class="fa fa-instagram fa-2x"><a href="#">instagram</a></i>
+            <i class="fa fa-twitter-square fa-2x"><a href="#">twitter</a></i>
+            <div class="contact ">
+                <h2> Contact US</h2 >
+                <a href="#">Mo:9510544008</a><br>
+                <a href="#">Mo:9601286039</a>
+            </div>
+        </div>
+     </div>
+</section>

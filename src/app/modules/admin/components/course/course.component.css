@@ -1,0 +1,20 @@
+.course 
+{
+    background-color: darkgray;
+    padding: 20px 100px;
+}
+.container h1
+{
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.container img
+{
+    border-radius: 33px;
+
+}
+.box
+{   
+    background-color: rgb(181, 196, 181);
+    padding: 20px 10px;
+    border-radius: 15px 50px 30px;
+}

@@ -1,0 +1,84 @@
+<p>comb works!</p>
+
+<h1>{{show()}}</h1> <!--combinatin of salary and name call by ts file function created-->
+<input type="text" [value]="name"/> <!--"1+2" replece by name-->   <!--this is a property binding  ex="name" this called expression-->
+
+<!--video no.9 one way data binding -->
+<br><br>
+<input type="text" (keyup.enter)="setText($event)">
+<br>
+<div>
+    <p><h3>Font Size: {{ textsize }}px</h3>
+  <!--  <button (click)="setSize('inc')">+</button>
+    <button (click)="setSize('dec')">-</button> -->
+    <input (input)="setSize($event)" type="range" min="10" max="100" value="10">
+</div> <br>
+<select (change)="setColor($event)">
+    <option value="primary">primary</option>
+    <option value="success">success</option>   
+    <option value="warning">warning</option>
+    <option value="danger">danger</option>
+</select>
+<hr/>  
+
+<p [style.fontSize.px]="textsize" [class]="textCls"> {{ text  }} </p>
+
+
+
+<section [class.hide]="isDataSubmited">
+    <div class="input-group">
+        <label> Name </label> 
+        <input type="text" name="name" (keyup)="setValue($event)" [value]="person.name">
+    </div>
+    <div class="input-group"> 
+        <label> E-mail </label>
+        <input type="text" name="email" (keyup)="setValue($event)" [value]="person.email">
+    </div>
+    <div class="input-group">
+         <label> Compnay Name </label> 
+        <input type="text" name="cmp" (keyup)="setValue($event)" [value]="person.cmp">
+    </div>
+    <div class="input-group">
+         <label> Salary </label>
+        <input type="text" name="sal" (keyup)="setValue($event)" [value]="person.sal">
+    </div>
+    <button (click)="submitData()">Submit</button>
+</section>
+
+<section [class.hide]="!isDataSubmited">
+    <p> Thank You For Your Details:</p>
+    <hr>
+    <p>Name:-   {{person.name}}</p>
+    <p>E-mail:-   {{person.email}}</p>
+    <p>Company Name:-   {{person.cmp}}</p>
+    <p>Salary:-   {{person.sal}}</p>
+
+    <button (click)="resetForm()">Submit one more</button>
+</section>
+
+
+
+
+
+
+
+<h1>Geter and Seter with Ajit </h1>
+
+<section>
+    <select (change)="onDepartmentChange(dep.value)" #dep>
+        <option disabled value="-1" selected>Choes Department</option>
+        <option [value]="i" *ngFor="let dep of departments; index as i">{{dep.name}}</option>
+    </select>
+<br/>
+<br/>
+<div>
+     Teacher:-
+    <input type="text" (keyup.enter)="0;" #teacher >
+
+</div>
+
+<app-seter [department]="selectedDep" [teacher]="teacher.value"></app-seter>
+</section>
+
+
+

@@ -1,0 +1,21 @@
+<h1>Department</h1>
+<p>{{department?.name}}
+<br/>
+New Teacher:
+{{teacher}}
+</p>
+
+<hr/>
+
+<h1> All departments</h1>
+
+<ul>
+    <li *ngFor="let dep of records">
+        Department Name: {{dep.name}}
+        <ul>
+            <li *ngFor="let teacher of dep.teachers">
+                Teacher Name: {{ teacher }}
+            </li>
+        </ul>
+    </li>
+</ul>

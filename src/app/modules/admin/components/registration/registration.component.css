@@ -1,0 +1,15 @@
+
+.form
+{
+    background-color: rgb(99, 82, 82) ;
+    padding: 70px 100px;
+    border: 5px solid rgb(73, 5, 5)
+}
+.field-icon {
+    float: center;
+    margin-left: -110px;
+    margin-top: 12px;
+    position: relative;
+    z-index: 2;
+  }
+  

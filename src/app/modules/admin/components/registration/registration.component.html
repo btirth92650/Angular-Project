@@ -1,0 +1,127 @@
+<section class="form">`
+    <h1 style="text-align:center; font-family:serif; background-color:rgba(219, 215, 215, 0.267); color:rgb(15, 12, 12); 
+ font-size:240%;   border-style: solid;
+   border-width: medium;   border-color: rgb(8, 8, 8); margin-top: 30px; margin-bottom: 30px; margin-right: 30px;
+   margin-left:30px;"> <b> Simple Rgistration Form </b></h1>
+    <form>
+        <div style="text-align:center; background-color:rgba(219, 215, 215, 0.267); border-style: solid;  border-width: medium;  
+      border-color: rgb(8, 8, 8); margin-top: 30px; margin-bottom: 30px; margin-right: 30px; margin-left: 30px;">
+            <legend>Details:</legend>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="User" class="form-label" style="float:right;"> First name:</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left;  margin: 4px; width: 300px;"
+                        type="text" ngModel name="Fname" (keyup)="setValue($event)" [value]="details.Fname"
+                        placeholder="Enter First name (surname)" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="Age" style="float:right;">Last name :</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left;  margin: 4px; width: 300px;"
+                        type="text" ngModel name="Lname" (keyup)="setValue($event)" [value]="details.Lname"
+                        placeholder="Enter Last name">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <label for="E-Mail" style="float:right;">E-mail:</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left;  margin: 4px; width: 300px;"
+                        type="text" ngModel name="Email" (keyup)="setValue($event)" [value]="details.Email"
+                        placeholder="Enter user e-mail">
+                </div>
+                <div class="col-md-2">
+                    <label for="password" style="float:right;">Password: </label>
+                </div>
+                <div class="col-md-1">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left; margin: 4px; width: 300px;"
+                        type="password" id="password" ngModel name="Password" (keyup)="setValue($event)"
+                        [value]="details.Password" placeholder="Enter Password" minlength="7" maxlength="12" #textid>
+                    <!-- (keyup.enter)="myEvent(textid.value)" -->
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-fw fa-eye field-icon" (click)="toggle()"></i>
+                    <ng-template [ngIf]="show">
+                        {{textid.value}}
+                    </ng-template>
+
+                    <!--aria-hidden="true"   onclick="toggle()"-->
+                </div>
+            </div>
+            <!--java script use >
+            <script>
+                var state= false;
+                function toggle(){
+                    if(state){
+                        document.getElementById("password").
+                        setAttribute("type","password");
+                        state = false;
+                    }
+                    else{
+                        document.getElementById("password").
+                        setAttribute("type","text");
+                        state = true;
+                    }
+                }
+            </script> -->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="number" style="float:right;"> Enter Phone number:</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left; margin: 4px; width: 300px;" type="tel"
+                        id="phone1" name="phone1" (keyup)="setValue($event)" [value]="details.phone1" ngModel
+                        placeholder="012-34-567-89" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="phone2" style="float:right;"> Enter 2nd number:</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left; margin: 4px; width: 300px;" type="tel"
+                        id="phone2" name="phone2" (keyup)="setValue($event)" [value]="details.phone2" ngModel
+                        placeholder="012-34-567-89" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <small>formate:012-34-567-89</small>
+                </div>
+                <div class="col-md-6">
+                    <small>formate:012-34-567-89</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="Age" style="float:right;">Age:</label>
+                </div>
+                <div class="col-md-4">
+                    <input style="border: 2px solid rgb(37, 12, 182); float:left; margin: 4px; width: 300px; "
+                        type="text" ngModel name="age" (keyup)="setValue($event)" [value]="details.age"
+                        placeholder="Enter user Age">
+                </div>
+                <div class="col-md-2">
+                    <label for="gender" style="float:right;">Choese your gender:</label>
+                </div>
+                <div class="col-md-4">
+                    <div style="float:left">
+                          <input class="" type="radio" name="sex" id="male" value="male" ngModel>
+                          <label class="form-check-label" for="male">MALE</label>
+                           <input class="" type="radio" name="sex" id="female" value="female" ngModel>
+                          <label class="form-check-label" for="female">FEMALE</label>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline-success" (click)="submitData()" style="color:rgba(7, 7, 7, 0.959);"
+                type="submit">
+                SUBMIT</button>
+            <button class="btn btn-outline-success"  style="color:rgba(7, 7, 7, 0.959);"
+                type="reset">
+                RESET</button>
+            <br><br>
+        </div>
+    </form>
+</section>
